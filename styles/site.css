@@ -22,16 +22,22 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(128, 177, 98, 0.22), transparent 38%),
+    radial-gradient(circle at 80% 85%, rgba(189, 156, 82, 0.18), transparent 35%),
+    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+  background-color: var(--bg-1);
+}
+
 body {
   margin: 0;
   color: var(--ink-900);
   font-family: "Chakra Petch", "Segoe UI", sans-serif;
   font-size: 18px;
   line-height: 1.45;
-  background:
-    radial-gradient(circle at 20% 15%, rgba(128, 177, 98, 0.22), transparent 38%),
-    radial-gradient(circle at 80% 85%, rgba(189, 156, 82, 0.18), transparent 35%),
-    linear-gradient(160deg, var(--bg-1), var(--bg-2));
+  background: transparent;
   min-height: 100vh;
 }
 
@@ -52,7 +58,7 @@ body {
   width: 100%;
   height: var(--header-height);
   margin: 0;
-  padding: 0 16px 0 0;
+  padding: 0 16px 0 6px;
   display: flex;
   align-items: center;
   gap: 18px;
@@ -98,7 +104,11 @@ body {
   position: relative;
   width: var(--menu-slot-width);
   flex: 0 0 var(--menu-slot-width);
-  z-index: 1001;
+}
+
+.menu-item:hover,
+.menu-item:focus-within {
+  z-index: 1500;
 }
 
 .menu-label {
@@ -230,7 +240,7 @@ body {
 .step-row {
   display: grid;
   grid-template-columns: minmax(250px, 1fr) minmax(240px, 360px);
-  align-items: center;
+  align-items: start;
   gap: 30px;
 }
 
@@ -251,6 +261,17 @@ body {
   border: 3px solid #314c2a;
   box-shadow: 0 10px 22px var(--shadow);
   background: #dbe8c8;
+}
+
+@media (orientation: portrait) {
+  .steps {
+    gap: 26px;
+  }
+
+  .step-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 @media (max-width: 860px) {
