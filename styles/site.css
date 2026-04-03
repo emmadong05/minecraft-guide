@@ -255,7 +255,8 @@ body {
 
 .step-image {
   width: 100%;
-  height: var(--step-image-height);
+  aspect-ratio: 16 / 9;
+  height: auto;
   object-fit: contain;
   padding: 10px;
   border: 3px solid #314c2a;
