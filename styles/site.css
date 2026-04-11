@@ -33,6 +33,7 @@ html {
 
 body {
   margin: 0;
+  padding: clamp(12px, 2.2vw, 24px);
   color: var(--ink-900);
   font-family: "Chakra Petch", "Segoe UI", sans-serif;
   font-size: 18px;
@@ -183,7 +184,38 @@ body {
 .guide-page {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 32px 20px 70px;
+  padding: clamp(20px, 3vw, 34px);
+  background: rgba(251, 255, 239, 0.94);
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+.home-icon-button {
+  position: fixed;
+  top: clamp(12px, 2.2vw, 24px);
+  left: clamp(12px, 2.2vw, 24px);
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--accent-green), var(--accent-green-dark));
+  border: 2px solid #233f1d;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(31, 44, 22, 0.35);
+  z-index: 3000;
+}
+
+.home-icon-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+.home-icon-button:hover,
+.home-icon-button:focus-visible {
+  transform: translateY(1px);
 }
 
 .part-heading {
