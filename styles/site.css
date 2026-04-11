@@ -180,6 +180,71 @@ body {
   padding: 48px 20px 70px;
 }
 
+.guide-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 32px 20px 70px;
+}
+
+.part-heading {
+  margin: 46px 0 14px;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.section-heading {
+  margin: 30px 0 10px;
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  line-height: 1.5;
+  text-align: left;
+}
+
+.section-copy {
+  margin: 0 0 16px;
+  text-align: left;
+}
+
+.section-note {
+  margin: 0 0 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.guide-list {
+  margin: 0 0 18px 22px;
+  padding: 0;
+  text-align: left;
+}
+
+.guide-list li {
+  margin: 6px 0;
+}
+
+.guide-list-tight {
+  margin: 0 0 16px 24px;
+  padding: 0;
+}
+
+.guide-list-tight li {
+  margin: 4px 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent-green-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  text-decoration: underline;
+}
+
 .page-title {
   margin: 0 0 20px;
   text-align: center;
@@ -254,6 +319,7 @@ body {
 }
 
 .step-image {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
@@ -262,6 +328,14 @@ body {
   border: 3px solid #314c2a;
   box-shadow: 0 10px 22px var(--shadow);
   background: #dbe8c8;
+}
+
+.step-image.is-empty {
+  visibility: hidden;
+  border: 0;
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
 }
 
 @media (orientation: portrait) {
